@@ -2,6 +2,7 @@ const express = require("express")
 const app = express()
 const path = require("path")
 const hbs = require("hbs")
+const port = process.env.PORT || 8000;
 
 // public static path
 const staticPath = path.join(__dirname, "../public")
@@ -35,6 +36,6 @@ app.get("*", (req, res) => {
     })
 })
 
-app.listen(8000, () => {
+app.listen(port, () => {
     console.log("Listening to the port 8000")
 })
